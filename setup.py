@@ -176,6 +176,8 @@ setup(name='kytos-utils',
       install_requires=[line.strip()
                         for line in open("requirements/run.txt").readlines()
                         if not line.startswith('#')],
+      extras_require={'dev': ['pip-tools',
+                              'coverage', 'pytest', 'yala', 'tox']},
       setup_requires=PYTEST_RUNNER,
       tests_require=['pytest'],
       packages=find_packages(exclude=['tests']),
