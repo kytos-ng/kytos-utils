@@ -1,5 +1,1 @@
-coverage
-pathspec
-pip-tools
-tox
-yala
+-e .[dev]

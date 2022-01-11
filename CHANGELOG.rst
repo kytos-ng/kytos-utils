@@ -23,6 +23,15 @@ Fixed
 Security
 ========
 
+[2022.1rc1] - "jovelina" - 2022-01-07
+*************************************
+
+Changed
+=======
+- Pinned run.in dependencies
+- Pinned ``requests==2.27.0`` to be compatible with other NApps docker build
+- Regenerated ``requirements/*.txt`` dependencies
+
 
 [2021.1] - "final" - 2021-05-31
 *******************************
