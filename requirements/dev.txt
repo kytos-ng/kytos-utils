@@ -56,7 +56,7 @@ jinja2==2.11.1
     # via kytos-utils
 lazy-object-proxy==1.7.1
     # via astroid
-markupsafe==2.0.1
+markupsafe==1.1.1
     # via
     #   jinja2
     #   kytos-utils
