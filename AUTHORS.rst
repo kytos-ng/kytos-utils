@@ -12,7 +12,7 @@ Authors
 - Rogerio Motitsuki <rogerio.motitsuki AT gmail DOT com>
 - Carlos Magno Barbosa <cmagnobarbosa AT gmail DOT com>
 - José Mauro <zemauror AT gmail DOT com>
-- Vinicius Arcanjo <viniciusarcanjov AT gmail DOT com>
+- Vinicius Arcanjo <vindasil AT fiu DOT edu>
 
 
 Contributors
