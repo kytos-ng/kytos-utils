@@ -179,7 +179,7 @@ setup(name='kytos-utils',
       extras_require={'dev': ['pip-tools',
                               'coverage', 'pytest', 'yala', 'tox']},
       setup_requires=PYTEST_RUNNER,
-      tests_require=['pytest'],
+      tests_require=['pytest==7.0.0'],
       packages=find_packages(exclude=['tests']),
       cmdclass={
           'ci': CITest,
