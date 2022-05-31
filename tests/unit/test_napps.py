@@ -3,6 +3,7 @@ import json
 import re
 import tempfile
 import unittest
+import urllib
 from pathlib import Path, PurePosixPath
 from unittest.mock import MagicMock, Mock, PropertyMock, call, patch
 from urllib.error import HTTPError
@@ -42,9 +43,11 @@ class TestNapps(unittest.TestCase):
 
         self.assertEqual(str(self.napps_manager._enabled), 'ABC')
 
-    def test_enabled_property__error(self):
+    @patch('urllib.request.urlopen')
+    def test_enabled_property__error(self, mock_urlopen):
         """Test enabled property to error case."""
 
+        mock_urlopen.side_effect = urllib.error.URLError("some_error")
         with self.assertRaises(SystemExit):
             # pylint: disable=pointless-statement
             self.napps_manager._enabled
@@ -61,9 +64,11 @@ class TestNapps(unittest.TestCase):
 
         self.assertEqual(str(self.napps_manager._installed), 'DEF')
 
-    def test_installed_property__error(self):
+    @patch('urllib.request.urlopen')
+    def test_installed_property__error(self, mock_urlopen):
         """Test installed property to error case."""
 
+        mock_urlopen.side_effect = urllib.error.URLError("some_error")
         with self.assertRaises(SystemExit):
             # pylint: disable=pointless-statement
             self.napps_manager._installed
@@ -174,8 +179,11 @@ class TestNapps(unittest.TestCase):
         self.assertEqual(installed_napps[0], ("kytos", "mef_eline"))
         self.assertEqual(installed_napps[1], ("kytos", "of_lldp"))
 
-    def test_get_installed__connection_error(self):
+    @patch('urllib.request.urlopen')
+    def test_get_installed__connection_error(self, mock_urlopen):
         """Test method get_installed to connection error case."""
+        err = '[Errno 111] Connection refused'
+        mock_urlopen.side_effect = urllib.error.URLError(err)
         with self.assertRaises(KytosException) as context:
             self.napps_manager.get_installed()
 
@@ -206,8 +214,11 @@ class TestNapps(unittest.TestCase):
         self.assertEqual(installed_napps[0], ("kytos", "mef_eline"))
         self.assertEqual(installed_napps[1], ("kytos", "of_lldp"))
 
-    def test_get_enabled__connection_error(self):
+    @patch('urllib.request.urlopen')
+    def test_get_enabled__connection_error(self, mock_urlopen):
         """Test method get_enabled to connection error case."""
+        err = '[Errno 111] Connection refused'
+        mock_urlopen.side_effect = urllib.error.URLError(err)
         with self.assertRaises(KytosException) as context:
             self.napps_manager.get_enabled()
 
