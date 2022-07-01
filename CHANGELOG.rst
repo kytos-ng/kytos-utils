@@ -20,7 +20,7 @@ Removed
 Fixed
 =====
 
-fixed napps.py bug - it used to give error before when python3 setup.py develop is executed.
+Updated ruamel.yaml import to avoid python3 setup.py develop wheels issue
 
 Security
 ========
