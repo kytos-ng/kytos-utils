@@ -20,6 +20,8 @@ Removed
 Fixed
 =====
 
+Updated ruamel.yaml import to avoid python3 setup.py develop wheels issue
+
 Security
 ========
 

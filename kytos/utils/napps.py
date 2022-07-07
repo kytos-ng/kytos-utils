@@ -13,7 +13,7 @@ from http import HTTPStatus
 # pylint: disable=ungrouped-imports,wrong-import-order
 import pathspec
 from jinja2 import Environment, FileSystemLoader
-from ruamel.yaml import YAML
+from ruamel.yaml.main import YAML
 
 from kytos.utils.client import NAppsClient
 from kytos.utils.config import KytosConfig
