@@ -2,15 +2,15 @@
 Overview
 ########
 
-**WARNING: As previously announced on our communication channels, the Kytos
-project will enter the "shutdown" phase on May 31, 2021. After this date,
-only critical patches (security and core bug fixes) will be accepted, and the
-project will be in "critical-only" mode for another six months (until November
-30, 2021). For more information visit the FAQ at <https://kytos.io/faq>. We'll
-have eternal gratitude to the entire community of developers and users that made
-the project so far.**
+|Tag| |Release| |License| |Build| |Coverage| |Quality|
 
-|Experimental| |Tag| |Release| |License| |Build| |Coverage| |Quality|
+.. raw:: html
+
+  <div align="center">
+    <h1><code>kytos-utils</code></h1>
+
+    <strong>CLI for Kytos SDN Platform</strong>
+  </div>
 
 This is a command line interface (cli) for `Kytos SDN Platform
 <https://kytos.io/>`_. With these utilities you can interact with Kytos daemon
@@ -22,7 +22,7 @@ QuickStart
 Installing
 ==========
 
-In order to use this software please install python3.6 or greater into your
+In order to use this software please install python3.9 into your
 environment beforehand.
 
 We are doing a huge effort to make Kytos and its components available on all
@@ -36,7 +36,7 @@ First you need to clone *kytos-utils* repository:
 
 .. code-block:: shell
 
-   $ git clone https://github.com/kytos/kytos-utils.git
+   $ git clone https://github.com/kytos-ng/kytos-utils.git
 
 After cloning, the installation process is done by standard `setuptools` install
 procedure:
@@ -73,20 +73,18 @@ This software is under *MIT-License*. For more information please read
 ``LICENSE`` file.
 
 .. |Experimental| image:: https://img.shields.io/badge/stability-beta-orange.svg
-.. |Tag| image:: https://img.shields.io/github/tag/kytos/kytos-utils.svg
-   :target: https://github.com/kytos/kytos-utils/tags
-.. |Release| image:: https://img.shields.io/github/release/kytos/kytos-utils.svg
-   :target: https://github.com/kytos/kytos-utils/releases
-.. |Tests| image:: https://travis-ci.org/kytos/kytos-utils.svg?branch=master
-   :target: https://travis-ci.org/kytos/kytos-utils
-.. |License| image:: https://img.shields.io/github/license/kytos/kytos-utils.svg
-   :target: https://github.com/kytos/kytos-utils/blob/master/LICENSE
-.. |Build| image:: https://scrutinizer-ci.com/g/kytos/kytos-utils/badges/build.png?b=master
+.. |Tag| image:: https://img.shields.io/github/tag/kytos-ng/kytos-utils.svg
+   :target: https://github.com/kytos-ng/kytos-utils/tags
+.. |Release| image:: https://img.shields.io/github/release/kytos-ng/kytos-utils.svg
+   :target: https://github.com/kytos-ng/kytos-utils/releases
+.. |License| image:: https://img.shields.io/github/license/kytos-ng/kytos-utils.svg
+   :target: https://github.com/kytos-ng/kytos-utils/blob/master/LICENSE
+.. |Build| image:: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/badges/build.png?b=master
   :alt: Build status
-  :target: https://scrutinizer-ci.com/g/kytos/kytos-utils/?branch=master
-.. |Coverage| image:: https://scrutinizer-ci.com/g/kytos/kytos-utils/badges/coverage.png?b=master
+  :target: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/?branch=master
+.. |Coverage| image:: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/badges/coverage.png?b=master
   :alt: Code coverage
-  :target: https://scrutinizer-ci.com/g/kytos/kytos-utils/?branch=master
-.. |Quality| image:: https://scrutinizer-ci.com/g/kytos/kytos-utils/badges/quality-score.png?b=master
+  :target: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/?branch=master
+.. |Quality| image:: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/badges/quality-score.png?b=master
   :alt: Code-quality score
-  :target: https://scrutinizer-ci.com/g/kytos/kytos-utils/?branch=master
+  :target: https://scrutinizer-ci.com/g/kytos-ng/kytos-utils/?branch=master
