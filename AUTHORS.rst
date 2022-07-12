@@ -22,3 +22,4 @@ Contributors
 - Erick Vermot <erick.vermot AT gmail DOT com>
 - Vinicius Arcanjo <viniciusarcanjov AT gmail DOT com>
 - Bárbara Boechat <barbs DOT boechat AT gmail DOT com>
+- Muhammad Aziz <muhaziz AT fiu DOT edu>

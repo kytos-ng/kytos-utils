@@ -20,10 +20,21 @@ Removed
 Fixed
 =====
 
-Updated ruamel.yaml import to avoid python3 setup.py develop wheels issue
-
 Security
 ========
+
+[2022.2rc1] - "kiko" - 2022-07-11
+*********************************
+
+Fixed
+=====
+
+- Updated ruamel.yaml import to avoid python3 setup.py develop wheels issue
+
+Removed
+=======
+
+- Removed deprecating ``tests_require`` and ``setup_requires``, bootstrapped tests dependencies directly on requirements/dev.txt with ``tox`` and ``pytest``
 
 
 [2022.1] - "jovelina" - 2022-01-21
