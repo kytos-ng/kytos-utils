@@ -1,5 +1,5 @@
 docopt==0.6.2
 pathspec==0.9.0
 requests==2.27.0
-jinja2==2.11.1 # same version as kytos currently has, needs to be upgraded later
+jinja2==3.1.2 # same version as kytos currently has, needs to be upgraded later
 ruamel.yaml==0.17.19
