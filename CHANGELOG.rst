@@ -3,13 +3,14 @@ Changelog
 #########
 This is a log of changes made to the *kytos-utils* project.
 
-UNRELEASED - Under development
+[2022.3.1]
 ******************************
 Added
 =====
 
 Changed
 =======
+- Updated requirements to be compatible with kytos: ``click==8.1.3``, ``jinja2==3.1.2``, ``markupsafe==2.1.1``
 
 Deprecated
 ==========
