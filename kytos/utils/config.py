@@ -44,7 +44,7 @@ def create_skel_dir():
         shutil.copytree(str(src), str(dst))
 
 
-class KytosConfig():
+class KytosConfig:
     """Kytos Configs.
 
     Read the config file for kytos utils and/or request data for the user in
@@ -184,7 +184,4 @@ class KytosConfig():
             kutils_metadata = cls.get_metadata()
             kutils_version = kutils_metadata.get('__version__')
 
-            if kytos_version != kutils_version:
-                logger = logging.getLogger()
-                logger.warning('kytos (%s) and kytos utils (%s) versions '
-                               'are not equal.', kytos_version, kutils_version)
+
