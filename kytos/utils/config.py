@@ -44,7 +44,7 @@ def create_skel_dir():
         shutil.copytree(str(src), str(dst))
 
 
-class KytosConfig:
+class KytosConfig():
     """Kytos Configs.
 
     Read the config file for kytos utils and/or request data for the user in
