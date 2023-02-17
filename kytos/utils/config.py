@@ -184,7 +184,4 @@ class KytosConfig():
             kutils_metadata = cls.get_metadata()
             kutils_version = kutils_metadata.get('__version__')
 
-            if kytos_version != kutils_version:
-                logger = logging.getLogger()
-                logger.warning('kytos (%s) and kytos utils (%s) versions '
-                               'are not equal.', kytos_version, kutils_version)
+
