@@ -22,8 +22,9 @@ class WebAPI:  # pylint: disable=too-few-public-methods
             url += f"/{version}"
 
         try:
-            result = requests.post(url)
-        except(HTTPError, URLError, requests.exceptions.ConnectionError):
+            result = requests.post(url, timeout=20)
+        except (HTTPError, URLError, requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout):
             LOG.error("Can't connect to server: %s", kytos_api)
             return
 

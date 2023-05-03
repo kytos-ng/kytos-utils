@@ -21,4 +21,4 @@ class TestWebAPI(unittest.TestCase):
 
         kytos_api = KytosConfig().config.get('kytos', 'api')
         url = f"{kytos_api}api/kytos/core/web/update/ABC"
-        mock_post.assert_called_with(url)
+        mock_post.assert_called_with(url, timeout=20)
