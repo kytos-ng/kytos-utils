@@ -64,7 +64,12 @@ class kytos_auth:  # pylint: disable=invalid-name
         endpoint = os.path.join(self.config.get('napps', 'api'), 'auth', '')
         username = self.config.get('auth', 'user')
         password = getpass('Enter the password for {}: '.format(username))
-        response = requests.get(endpoint, auth=(username, password))
+        try:
+            response = requests.get(endpoint, auth=(username, password),
+                                    timeout=20)
+        except (requests.exceptions.ConnectionError,
+                requests.exceptions.Timeout):
+            print(f"It couldn't connect to {endpoint}. Try again later.")
 
         # Check if it is unauthorized
         if response.status_code == 401:

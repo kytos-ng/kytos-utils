@@ -6,6 +6,7 @@ from kytos.utils.config import KytosConfig
 from kytos.utils.decorators import kytos_auth
 
 
+# pylint: disable=unnecessary-dunder-call
 class TestKytosAuth(unittest.TestCase):
     """Test the decorator kytos_auth."""
 
