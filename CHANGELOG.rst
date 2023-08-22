@@ -3,27 +3,17 @@ Changelog
 #########
 This is a log of changes made to the *kytos-utils* project.
 
+[2023.1.0] - 2023-06-05
+***********************
+
+No major changes since the last release
+
 [2022.3.1]
-******************************
-Added
-=====
+**********
 
 Changed
 =======
 - Updated requirements to be compatible with kytos: ``click==8.1.3``, ``jinja2==3.1.2``, ``markupsafe==2.1.1``
-
-Deprecated
-==========
-
-Removed
-=======
-
-Fixed
-=====
-
-Security
-========
-
 
 [2022.3.0] - 2023-01-23
 ***********************
