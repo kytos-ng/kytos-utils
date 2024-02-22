@@ -3,6 +3,11 @@ Changelog
 #########
 This is a log of changes made to the *kytos-utils* project.
 
+[2023.2.0] - 2024-02-16
+***********************
+
+No major changes since the last release
+
 [2023.1.0] - 2023-06-05
 ***********************
 
