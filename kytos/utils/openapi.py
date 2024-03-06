@@ -32,7 +32,7 @@ class OpenAPI:  # pylint: disable=too-few-public-methods
     def render_template(self):
         """Render and save API doc in openapi.yml."""
         self._parse_paths()
-        context = dict(napp=self._napp_dict, paths=self._paths)
+        context = {"napp": self._napp_dict, "paths": self._paths}
         self._save(context)
 
     def _parse_napp_metadata(self):
@@ -143,8 +143,8 @@ class OpenAPI:  # pylint: disable=too-few-public-methods
 
     def _add_methods(self, methods, path_methods):
         for method in methods:
-            path_method = dict(summary=self._summary,
-                               description=self._description)
+            path_method = {"summary": self._summary,
+                           "description": self._description}
             path_methods[method.lower()] = path_method
 
     @classmethod
