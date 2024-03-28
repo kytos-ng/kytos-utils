@@ -22,7 +22,7 @@ QuickStart
 Installing
 ==========
 
-In order to use this software please install python3.9 into your
+In order to use this software please install python3.11 into your
 environment beforehand.
 
 We are doing a huge effort to make Kytos and its components available on all
@@ -44,7 +44,10 @@ procedure:
 .. code-block:: shell
 
    $ cd kytos-utils
-   $ sudo python3 setup.py install
+   $ sudo python3 -m pip install .
+
+To install the kytos environment, please follow our
+`development environment setup <https://github.com/kytos-ng/documentation/blob/master/tutorials/napps/development_environment_setup.rst>`_.
 
 Usage
 *****

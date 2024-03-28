@@ -7,7 +7,6 @@ import re
 import sys
 from abc import abstractmethod
 # Disabling checks due to https://github.com/PyCQA/pylint/issues/73
-from distutils.command.clean import clean  # pylint: disable=E0401,E0611
 from subprocess import CalledProcessError, call, check_call
 
 from setuptools import Command, find_packages, setup
@@ -61,17 +60,14 @@ class TestCommand(Command):
         pass
 
 
-class Cleaner(clean):
+class Cleaner(SimpleCommand):
     """Custom clean command to tidy up the project root."""
 
     description = 'clean build, dist, pyc and egg from package and docs'
 
     def run(self):
         """Clean build, dist, pyc and egg from package and docs."""
-        super().run()
-        call('rm -vrf ./build ./dist ./*.egg-info', shell=True)
-        call('find . -name __pycache__ -type d | xargs rm -rf', shell=True)
-        call('test -d docs && make -C docs/ clean', shell=True)
+        call('make clean', shell=True)
 
 
 class Test(TestCommand):
@@ -144,16 +140,16 @@ setup(name='kytos-utils',
                         if not line.startswith('#')],
       extras_require={'dev': [
           'pip-tools >= 2.0',
-          'pytest==7.2.1',
-          'pytest-cov==4.0.0',
-          'pytest-asyncio==0.20.3',
-          'black==23.3.0',
-          'isort==5.12.0',
-          'pylint==2.15.0',
-          'pycodestyle==2.10.0',
+          'pytest==8.0.1',
+          'pytest-cov==4.1.0',
+          'pytest-asyncio==0.23.5',
+          'black==24.2.0',
+          'isort==5.13.2',
+          'pylint==3.1.0',
+          'pycodestyle==2.11.1',
           'yala==3.2.0',
-          'tox==3.28.0',
-          'virtualenv==20.21.0'
+          'tox==4.13.0',
+          'virtualenv==20.25.1',
       ]},
       packages=find_packages(exclude=['tests']),
       cmdclass={

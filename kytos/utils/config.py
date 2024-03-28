@@ -158,7 +158,7 @@ class KytosConfig():
     @classmethod
     def get_metadata(cls):
         """Return kytos-utils metadata."""
-        meta_path = ("%s/metadata.py" % os.path.dirname(__file__))
+        meta_path = "%s/metadata.py" % os.path.dirname(__file__)
         meta_file = open(meta_path).read()
         metadata = dict(re.findall(r"(__[a-z]+__)\s*=\s*'([^']+)'", meta_file))
         return metadata
