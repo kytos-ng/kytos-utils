@@ -6,10 +6,12 @@ This is a log of changes made to the *kytos-utils* project.
 [UNRELEASED] - Under development
 ********************************
 
+[2024.1.0] - 2024-07-23
+***********************
+
 Changed
 =======
 - Updated python environment installation from 3.9 to 3.11
-- Updated test dependencies
 
 [2023.2.0] - 2024-02-16
 ***********************
