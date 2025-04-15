@@ -6,7 +6,7 @@ This is a log of changes made to the *kytos-utils* project.
 [UNRELEASED] - Under development
 ********************************
 
-[2025.1.0] - 2024-04-14
+[2025.1.0] - 2025-04-14
 ***********************
 
 No major changes since the last release.
